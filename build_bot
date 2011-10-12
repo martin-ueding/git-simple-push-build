@@ -7,7 +7,7 @@
 set -e
 set -u
 
-logfile=$(date +%s)-$(uuidgen).log
+logfile=$(date +%s)_$(uuidgen).log
 
 exec > $logfile 2>&1
 
