@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2011, 2014 Martin Ueding <dev@martin-ueding.de>
 
 # This assumes that you are in the head of a git repository. If not, the script
 # will just fail at some point when trying to check out the branch.
@@ -7,9 +7,9 @@
 set -e
 set -u
 
-logfile=$(date +%s)_$(uuidgen).log
+logfile="$(date +%s)_$(uuidgen).log"
 
-exec > $logfile 2>&1
+exec > "$logfile" 2>&1
 
 git checkout master
 make
